@@ -36,25 +36,49 @@ h1 {
   font-size: 1.5em;
   line-height: 1.3em;
   font-weight: bold;
-
 }
-
-input[type='text'] {
-  padding: 4px 6px;
-
-  border-radius: 8px;
-  border: none;
-  width: 30vw;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.input-wrap {
+.container {
   display: flex;
-  margin: 10px 6px;
-  padding: 4px 6px;
+}
+form {
+  color: rgb(206, 201, 201);
+  display: flex;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  margin: 15px;
 }
 
-input:focus {
+input[type='search'] {
+  background: transparent;
+  padding: 6px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+button[type='submit'] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button[type='submit']:hover {
+  opacity: 1;
+}
+
+button[type='submit']:focus,
+input[type='search']:focus {
   outline: none;
 }
 
@@ -87,21 +111,6 @@ article:hover img {
   box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.6);
 }
 
-
-button {
-  width: 150px;
-  border: 0;
-  border-radius: 3px;
-  outline: 0;
-  cursor: pointer;
-  font-size: 18px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-  opacity: 0.8;
-}
-button:hover {
-  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.5);
-  opacity: 1;
-}
 .btn-next {
   display: flex;
   flex-direction: row;
@@ -153,7 +162,6 @@ h2 {
   width: 30vw;
   z-index: 100;
   overflow: hidden;
-
   font-size: 0.8em;
   border-radius: 14px;
   border: 1px solid black;
