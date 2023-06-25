@@ -14,7 +14,6 @@ const GetApi = () => {
   if (error) return <div>Request Failed {error}</div>;
   if (isLoading) return <div>Loading...</div>;
   // Show the response if everything is fine
-  console.log(data)
   return data
 };
 export default GetApi;
