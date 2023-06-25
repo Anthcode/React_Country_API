@@ -19,7 +19,7 @@ const GetApi = () => {
     <>
       <ul>
         {data.map((el) => (
-          <div key={el.numericCode}>
+          <div key={el.cca2}>
           <li > {el.name.common}</li> <img src={el.flags.png} alt={el.name.common}/>
           </div>
         ))}

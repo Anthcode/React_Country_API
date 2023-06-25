@@ -47,7 +47,7 @@ justify-content: space-around;
 }
 li{
   display: flex;
-  font-size: .5em;
+  font-size: .8em;
 }
 
 .container {
