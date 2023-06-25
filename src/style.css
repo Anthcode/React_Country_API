@@ -37,6 +37,13 @@ h1 {
   line-height: 1.3em;
   font-weight: bold;
 }
+ul{
+list-style: none;
+}
+li{
+  font-size: .5em;
+}
+
 .container {
   display: flex;
 }
