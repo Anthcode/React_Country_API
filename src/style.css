@@ -37,17 +37,16 @@ h1 {
   line-height: 1.3em;
   font-weight: bold;
 }
-ul{
-list-style: none;
-margin:15px;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-
-}
-li{
+ul {
+  list-style: none;
+  margin: 15px;
   display: flex;
-  font-size: .7em;
+  flex-direction: column;
+  justify-content: space-around;
+}
+li {
+  display: flex;
+  font-size: 0.7em;
 }
 
 .container {
@@ -123,8 +122,8 @@ article:hover {
 article:hover img {
   box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.6);
 }
-.flag{
-margin:0 10px;
+.flag {
+  margin: 0 10px;
 }
 .btn-next {
   display: flex;
@@ -142,22 +141,21 @@ margin:0 10px;
   justify-content: center;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: .9em;
   animation: animatetop 1.3s ease-out infinite;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 @keyframes animatetop {
   0% {
     display: none;
     opacity: 0;
   }
-  25% {
+  100% {
     display: block;
     opacity: 1;
   }
-  100% {
-    display: block;
-    opacity: 0;
-  }
+
 }
 
 .backdrop {
@@ -234,4 +232,9 @@ h2 {
   font-size: 0.8em;
   line-height: 80%;
   margin: 0;
+}
+h3 {
+  font-size: 0.6em;
+  text-align: center;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }

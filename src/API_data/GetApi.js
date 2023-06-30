@@ -3,15 +3,14 @@ import { useQuery } from '@tanstack/react-query';
 import fetch from './fetch';
 
 const GetApi = () => {
-  const [addData, setAddData] = useState(5);
+  const [addData, setAddData] = useState(10);
 
-  const { status, data } = useQuery(['name'], () =>
+  const { status, data } = useQuery(['country'], () =>
     fetch('https://restcountries.com/v3.1/all/?fields=name,tld,flag')
   );
   if (status === 'loading') return <h2>Loading...</h2>;
   if (status === 'error') return <h2>Error :(</h2>;
 
-  console.log(data);
   return (
     <>
       <ul>
