@@ -28,7 +28,7 @@ export default function App() {
     <>
       <div className="App">
         <h1>Counrty API</h1>
-        <Header />
+        <Header  countries={countries} setCountries={setCountries} />
         <CountryList countries={countries}/>
       </div>
       <Footer />
