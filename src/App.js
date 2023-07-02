@@ -7,8 +7,9 @@ import CountryList from './components/CountryList'
 
 export default function App() {
 
-  const URL = "https://restcountries.com/v3.1/all?fields=name,flag,tld";
+  const URL = "https://restcountries.com/v3.1/all?fields=name,flag";
   const [countries, setCountries] = useState([]);
+  const [filter, setFilter]= useState([])
 
   useEffect(() => {
     const getData = async () => {
@@ -28,8 +29,8 @@ export default function App() {
     <>
       <div className="App">
         <h1>Counrty API</h1>
-        <Header  countries={countries} setCountries={setCountries} />
-        <CountryList countries={countries}/>
+        <Header  countries={countries} setCountries={setCountries} filter={filter} setFilter={setFilter} />
+        <CountryList countries={countries} filter={filter}/>
       </div>
       <Footer />
     </>
