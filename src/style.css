@@ -19,6 +19,7 @@ body {
 }
 
 .App {
+  min-width: 300px;
   background-color: linear-gradient(to bottom right, #223ec1, #6fa3eb);
   margin: 50px;
   padding: 8px 6px;
