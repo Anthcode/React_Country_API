@@ -19,7 +19,7 @@ body {
 }
 
 .App {
-  min-width: 300px;
+  min-width: 320px;
   background-color: linear-gradient(to bottom right, #223ec1, #6fa3eb);
   margin: 50px;
   padding: 8px 6px;
@@ -49,6 +49,11 @@ li {
   display: flex;
   font-size: 0.7em;
 }
+li:hover {
+  color: azure;
+  scale: 1.02;
+  cursor: pointer;
+}
 
 .container {
   display: flex;
@@ -60,6 +65,7 @@ form {
   border: 1px solid currentColor;
   border-radius: 8px;
   margin: 15px;
+  height: 32px;
 }
 
 input[type='search'] {
@@ -126,6 +132,10 @@ article:hover img {
 .flag {
   margin: 0 10px;
 }
+.CountryList {
+  display: flex;
+  flex-direction: column;
+}
 .btn-next {
   display: flex;
   flex-direction: row;
@@ -142,7 +152,7 @@ article:hover img {
   justify-content: center;
 }
 h2 {
-  font-size: .9em;
+  font-size: 0.9em;
   animation: animatetop 1.3s ease-out infinite;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -156,7 +166,6 @@ h2 {
     display: block;
     opacity: 1;
   }
-
 }
 
 .backdrop {
@@ -238,4 +247,13 @@ h3 {
   font-size: 0.6em;
   text-align: center;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (max-width: 412px) {
+  .App {
+    font-size: 0.9em;
+  }
+  .container {
+    width: 80vw;
+    margin: 0 auto;
+  }
 }
