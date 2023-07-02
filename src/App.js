@@ -15,6 +15,7 @@ export default function App() {
       try {
         const res = await fetch(URL);
         const resp = await res.json();
+        resp.sort((a,b)=> a.name.common>b.name.common?1:-1)
         setCountries(resp);
       } catch (err) {
         console.log(err);
