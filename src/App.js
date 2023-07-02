@@ -18,6 +18,7 @@ export default function App() {
         const resp = await res.json();
         resp.sort((a,b)=> a.name.common>b.name.common?1:-1)
         setCountries(resp);
+        setFilter(resp)
       } catch (err) {
         console.log(err);
       }
@@ -29,7 +30,7 @@ export default function App() {
     <>
       <div className="App">
         <h1>Counrty API</h1>
-        <Header  countries={countries} setCountries={setCountries} filter={filter} setFilter={setFilter} />
+        <Header   setCountries={setCountries} filter={filter}  />
         <CountryList countries={countries} filter={filter}/>
       </div>
       <Footer />
