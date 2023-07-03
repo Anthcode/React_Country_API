@@ -139,8 +139,10 @@ article:hover img {
   margin: 0 10px;
 }
 .CountryList {
+  width: 90%;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .btn-next {
   display: flex;
@@ -254,6 +256,7 @@ h3 {
   text-align: center;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
+
 @media only screen and (max-width: 412px) {
   .App {
     font-size: 0.9em;
