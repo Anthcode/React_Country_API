@@ -1,3 +1,4 @@
 # React_Country_API
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/stackblitz-starters-u19bbo)
+Country APP
+[⚡️](https://stackblitz-starters-u19bbo.stackblitz.io/)

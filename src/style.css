@@ -16,10 +16,14 @@ body {
 #root {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App {
   min-width: 320px;
+  width: 600px;
   background-color: linear-gradient(to bottom right, #223ec1, #6fa3eb);
   margin: 50px;
   padding: 8px 6px;
@@ -28,6 +32,8 @@ body {
   box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
   color: #fff;
