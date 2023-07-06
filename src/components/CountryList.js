@@ -10,7 +10,8 @@ export default function CountryList({countries}) {
 
   return (
     <div className="CountryList">
-     <div className="CountryInfo"> {countrySelect} </div>
+      {countrySelect??
+     <div className="CountryInfo"><h4> {countrySelect} </h4></div>}
 <ul>
     {countries.slice(0, addData).map((country)=>(
      <li key={country.name.common} onClick={(e)=>setCountrySelect(e.target.innerText)}>{country.flag} {country.name.common}</li>
