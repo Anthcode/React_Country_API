@@ -139,7 +139,7 @@ article:hover img {
   margin: 0 10px;
 }
 .CountryList {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -147,10 +147,15 @@ article:hover img {
 }
 
 .CountryInfo{
-
   width: 100%;
   margin: 12px 14px;
   padding: 4px 6px;
+}
+.CountryWrapp{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 .btn-next {
   display: flex;
