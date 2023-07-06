@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 export default function CountryList({countries}) {
-  const [addData, setAddData] =useState(15)
+  const [addData, setAddData] =useState(10)
   const [countrySelect, setCountrySelect] = useState('')
 
 
@@ -10,10 +10,10 @@ export default function CountryList({countries}) {
 
   return (
     <div className="CountryList">
-      {  console.log(countrySelect)}
+     <div className="CountryInfo"> {countrySelect} </div>
 <ul>
     {countries.slice(0, addData).map((country)=>(
-     <li key={country.name.common} onClick={(e)=>setCountrySelect(e.target.innerHTML)}>{country.flag} {country.name.common}</li>
+     <li key={country.name.common} onClick={(e)=>setCountrySelect(e.target.innerText)}>{country.flag} {country.name.common}</li>
     ))}
     </ul>
     <button className="btn-next" onClick={() => setAddData(addData + 5)}>

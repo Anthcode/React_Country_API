@@ -33,7 +33,7 @@ export default function App() {
       <div className="App">
         <h1>Counrty API</h1>
         <Header setCountries={setCountries} filter={filter} />
-        <CountryList countries={countries} filter={filter} />
+        <CountryList countries={countries}  />
       </div>
       <Footer />
     </>

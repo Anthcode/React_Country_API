@@ -145,6 +145,13 @@ article:hover img {
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.CountryInfo{
+
+  width: 100%;
+  margin: 12px 14px;
+  padding: 4px 6px;
+}
 .btn-next {
   display: flex;
   flex-direction: row;
