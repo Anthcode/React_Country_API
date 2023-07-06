@@ -13,7 +13,7 @@ export default function CountryList({countries}) {
     <>
 {countrySelect &&
     <div className="CountryWrapp">
-    <div className="CountryInfo">{countrySelect.flag} {countrySelect.name.common} </div><div>x</div>
+    <div className="CountryInfo">{countrySelect.flag} {countrySelect.name.common} </div><button className="close" onClick={()=>setCountrySelect(null)}>x</button>
     </div>} 
 
     <div className="CountryList">
