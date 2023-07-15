@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Country from './Country'
 
 export default function CountryList({countries}) {
   const [addData, setAddData] =useState(10)
@@ -11,10 +12,7 @@ export default function CountryList({countries}) {
 
   return (
     <>
-{countrySelect &&
-    <div className="CountryWrapp">
-    <div className="CountryInfo">{countrySelect.flag} {countrySelect.name.common} </div><button className="close" onClick={()=>setCountrySelect(null)}>x</button>
-    </div>} 
+{countrySelect && <Country countrySelect={countrySelect} setCountrySelect={setCountrySelect}/>} 
 
     <div className="CountryList">
 <ul>
