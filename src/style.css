@@ -153,6 +153,7 @@ article:hover img {
   padding: 4px 6px;
 }
 .CountryWrapp{
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -162,16 +163,19 @@ article:hover img {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 .close{
+  position: absolute;
   width: 20px;
   height: 20px;
   padding: 0;
-  text-align: center;
-
+  margin: 0;
+  right: 0px;
 }
 .close:hover{
-  
   color: white;
   text-decoration: none;
+}
+p{
+  margin: 2px 0;
 }
 .btn-next {
   display: flex;
@@ -203,6 +207,25 @@ h2 {
     display: block;
     opacity: 1;
   }
+}
+
+h4{
+  font-size: 0.7em;
+}
+.region{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.6em;
+  margin:4px 0;
+}
+.lang{
+  margin: 3px 0;
+  font-size: 1em;
+}
+.lang-li{
+  font-size: 0.8em;
+
 }
 
 .backdrop {

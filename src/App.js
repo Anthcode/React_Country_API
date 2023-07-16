@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import CountryList from './components/CountryList';
 
 export default function App() {
-  const URL = 'https://restcountries.com/v3.1/all?fields=name,flag';
+  const URL = 'https://restcountries.com/v3.1/all?fields=name,flag,languages,capital,region';
   const [countries, setCountries] = useState([]);
   const [filter, setFilter] = useState([]);
   const dataRan = useRef(false);
