@@ -1,25 +1,29 @@
 import React, {useState} from 'react';
+import Country from './Country'
 
 export default function CountryList({countries}) {
-  const [addData, setAddData] =useState(15)
-  const [countrySelect, setCountrySelect] = useState('')
+  const [addData, setAddData] =useState(10)
+  const [countrySelect, setCountrySelect] = useState()
 
+  const handleCountry =(name) =>{
+    setCountrySelect(name)
 
-
-
+  }
 
   return (
+    <>
+{countrySelect && <Country countrySelect={countrySelect} setCountrySelect={setCountrySelect}/>} 
+
     <div className="CountryList">
-      {  console.log(countrySelect)}
 <ul>
     {countries.slice(0, addData).map((country)=>(
-     <li key={country.name.common} onClick={(e)=>setCountrySelect(e.target.innerHTML)}>{country.flag} {country.name.common}</li>
+     <li key={country.name.common} onClick={()=>handleCountry(country)}>{country.flag} {country.name.common}</li>
     ))}
     </ul>
     <button className="btn-next" onClick={() => setAddData(addData + 5)}>
         Add Next
       </button> 
     </div>
-
+</>
   );
 }

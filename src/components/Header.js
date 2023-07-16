@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Header({ filter,setCountries }) {
  
 
   const handleInput = (e) => {
     e.preventDefault();
-
     setCountries(filter.filter((country) =>{
     if (e.target.value==="") return country
     else if ( country.name.common.toLowerCase().includes(e.target.value.toLowerCase())) 
@@ -21,6 +20,8 @@ export default function Header({ filter,setCountries }) {
           <input
             type="search"
             placeholder="Search country: "
+            autoFocus
+            onFocus={(e)=>e.target.select()}
             onChange={handleInput}
           />
           <button type="submit">Search</button>
