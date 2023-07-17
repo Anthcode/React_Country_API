@@ -140,14 +140,19 @@ article:hover img {
   margin: 0 10px;
 }
 .NameList{
-  display: flex;
-}
-.CountryList {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap:18px;
+  grid-row-gap: 6px;
+  margin: 10px;
+}
+
+
+.CountryList {
+width: 100%;
+margin: 10px;
+
 }
 
 .CountryInfo{
@@ -312,6 +317,19 @@ h3 {
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
 
+
+@media only screen and (max-width: 1582px) {
+  .NameList{
+    font-size: .9em;
+  }
+}
+
+@media only screen and (max-width: 904px) {
+  .NameList{
+    display: flex;
+  }
+}
+
 @media only screen and (max-width: 412px) {
   .App {
     font-size: 0.9em;
@@ -319,5 +337,8 @@ h3 {
   .container {
     width: 80vw;
     margin: 0 auto;
+  }
+  .NameList{
+    display: flex;
   }
 }

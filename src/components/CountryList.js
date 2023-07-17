@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Country from './Country'
 
 export default function CountryList({countries}) {
-  const [addData, setAddData] =useState(20)
+  const [addData, setAddData] =useState(32)
   const [countrySelect, setCountrySelect] = useState()
   const handleCountry =(name) =>{
     setCountrySelect(name)
@@ -18,10 +18,11 @@ export default function CountryList({countries}) {
             </li>
           ))}
         </ul>
-        <button className="btn-next" onClick={() => setAddData(addData + 5)}>
+       
+      </div>
+      <button className="btn-next" onClick={() => setAddData(addData + 5)}>
           Add Next
         </button>
-      </div>
 </>
   );
 }
