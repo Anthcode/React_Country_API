@@ -139,6 +139,9 @@ article:hover img {
 .flag {
   margin: 0 10px;
 }
+.NameList{
+  display: flex;
+}
 .CountryList {
   width: 100%;
   display: flex;
