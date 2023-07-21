@@ -22,7 +22,7 @@ export default function Header({ filter, setCountries }) {
           <input
             type="search"
             placeholder="Search country: "
-            autoFocus
+            //autoFocus
             onFocus={(e) => e.target.select()}
             onChange={handleInput}
           />

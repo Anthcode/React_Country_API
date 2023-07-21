@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+:root {
+  --dark: #101315;
+  --light: #eeeeee;
+  --gradient: linear-gradient(10deg, #b648ff, #ef5dff);
+}
+
 body {
   height: 100vh;
   width: 100%;
@@ -139,38 +145,29 @@ article:hover img {
 .flag {
   margin: 0 10px;
 }
-.NameList{
+.NameList {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap:18px;
+  grid-column-gap: 18px;
   grid-row-gap: 6px;
   margin: 10px;
 }
 
-
 .CountryList {
-width: 100%;
-margin: 10px;
-
+  width: 100%;
+  margin: 10px;
 }
 
-.CountryInfo{
+.CountryInfo {
   width: 100%;
   margin: 12px 14px;
   padding: 4px 6px;
 }
-.CountryWrapp{
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.295);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+.CountryWrapp {
+  margin: 18px;
 }
-.close{
+.close {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -178,11 +175,11 @@ margin: 10px;
   margin: 0;
   right: 0px;
 }
-.close:hover{
+.close:hover {
   color: white;
   text-decoration: none;
 }
-p{
+p {
   margin: 2px 0;
 }
 .btn-next {
@@ -217,23 +214,22 @@ h2 {
   }
 }
 
-h4{
+h4 {
   font-size: 0.7em;
 }
-.region{
+.region {
   display: flex;
   justify-content: center;
   flex-direction: column;
   font-size: 0.6em;
-  margin:4px 0;
+  margin: 4px 0;
 }
-.lang{
+.lang {
   margin: 3px 0;
   font-size: 1em;
 }
-.lang-li{
+.lang-li {
   font-size: 0.8em;
-
 }
 
 .backdrop {
@@ -242,26 +238,30 @@ h4{
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 10;
   background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: clamp(50%, 700px, 90%);
+  height: min(90%, 300px);
+  margin: auto;
+  padding: 0 2rem;
+  border-radius: 12px;
   display: flex;
-  justify-content: flex-start;
-  min-width: 320px;
-  width: 30vw;
-  z-index: 100;
-  overflow: hidden;
-  font-size: 0.8em;
-  border-radius: 14px;
-  border: 1px solid black;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
-  animation: anim 0.2s ease-in;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.purple-gradient {
+  background: var(--gradient);
+}
+
+.btn-close {
+  padding: 4px 6px;
+  align-self: center;
 }
 
 @keyframes anim {
@@ -317,15 +317,14 @@ h3 {
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
 
-
 @media only screen and (max-width: 1582px) {
-  .NameList{
-    font-size: .9em;
+  .NameList {
+    font-size: 0.9em;
   }
 }
 
 @media only screen and (max-width: 904px) {
-  .NameList{
+  .NameList {
     display: flex;
   }
 }
@@ -338,7 +337,7 @@ h3 {
     width: 80vw;
     margin: 0 auto;
   }
-  .NameList{
+  .NameList {
     display: flex;
   }
 }
