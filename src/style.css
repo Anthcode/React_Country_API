@@ -253,6 +253,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .purple-gradient {
@@ -262,6 +263,7 @@ h4 {
 .btn-close {
   padding: 4px 6px;
   align-self: center;
+  border-radius: 8px;
 }
 
 @keyframes anim {
