@@ -1,5 +1,6 @@
 {
   "name": "stackblitz-starters-u19bbo",
+   "homepage": "https:///Anthcode.github.io/React_Country_API/",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,8 @@
     "react-dom": "18.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
