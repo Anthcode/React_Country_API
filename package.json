@@ -1,5 +1,5 @@
 {
-  "name": "stackblitz-starters-u19bbo",
+  "name": "country-api",
   "homepage": "https://anthcode.github.io/React_Country_API/",
   "version": "0.0.0",
   "private": true,
@@ -17,6 +17,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^1.0.0",
     "gh-pages": "^5.0.0",
     "react-scripts": "latest"
   },

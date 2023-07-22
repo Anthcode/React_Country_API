@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AnimatePresence } from "framer-motion";
 import Modal from './Modal/Index'
 
-export default function CountryList({ countries }) {
+export default function CountryList({ countries,loading }) {
   const [addData, setAddData] = useState(32)
   const [countrySelect, setCountrySelect] = useState()
   const [modalOpen, setModalOpen] = useState(false)
@@ -19,6 +19,7 @@ export default function CountryList({ countries }) {
   return (
     <>
       <div className="CountryList">
+        {loading && <h2>Loading ...</h2>}
         <ul className="NameList">
           {countries.slice(0, addData).map((country) => (
             <li key={country.name.common} onClick={() => handleCountry(country)}>
@@ -28,7 +29,7 @@ export default function CountryList({ countries }) {
         </ul>
 
       </div>
-      <button className="btn-next" onClick={() => setAddData(addData + 5)}>
+      <button className="btn-next" onClick={() => setAddData(addData + 10)}>
         Add Next
       </button>
 

@@ -8,18 +8,18 @@ export default function App() {
   const URL = 'https://restcountries.com/v3.1/all?fields=name,flag,languages,capital,region';
   const [countries, setCountries] = useState([]);
   const [filter, setFilter] = useState([]);
+  const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-   
+  useEffect(() => { 
       const getData = async () => {
-        console.log('loading')
+
         try {
           const res = await fetch(URL);
           const resp = await res.json();
           resp.sort((a, b) => (a.name.common > b.name.common ? 1 : -1));
           setCountries(resp);
           setFilter(resp);
-          console.log("data OK");
+          setLoading(false)
         } catch (err) {
           console.log(err);
         }
@@ -32,7 +32,7 @@ export default function App() {
       <div className="App">
         <h1>Counrty API</h1>
         <Header setCountries={setCountries} filter={filter} />
-        <CountryList countries={countries} />
+        <CountryList countries={countries} loading={loading} />
       </div>
       <Footer />
     </>
