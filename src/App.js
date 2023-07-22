@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,24 +9,22 @@ export default function App() {
   const [countries, setCountries] = useState([]);
   const [filter, setFilter] = useState([]);
 
-  const dataRan = useRef(false);
-
   useEffect(() => {
-    if (dataRan.current === true) {
+   
       const getData = async () => {
+        console.log('loading')
         try {
           const res = await fetch(URL);
           const resp = await res.json();
           resp.sort((a, b) => (a.name.common > b.name.common ? 1 : -1));
           setCountries(resp);
           setFilter(resp);
+          console.log("data OK");
         } catch (err) {
           console.log(err);
         }
       };
       getData();
-    }
-    return () => (dataRan.current = true);
   }, []);
 
   return (

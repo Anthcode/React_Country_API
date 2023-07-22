@@ -331,7 +331,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 600px) {
   .App {
     font-size: 0.9em;
   }
